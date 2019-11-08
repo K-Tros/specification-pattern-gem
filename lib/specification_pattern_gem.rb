@@ -1,5 +1,3 @@
-require "specification_pattern/version"
-
 module SpecPattern
     class Composite
 
@@ -82,11 +80,33 @@ module SpecPattern
 
     class NotSpec < Composite
         def initialize(spec)
-            @spec = self
+            @spec = spec
         end
 
         def is_satisfied_by?(candidate)
             !@spec.is_satisfied_by?(candidate)
+        end
+    end
+end
+
+# Test code begins here
+
+module Post
+    class WithTitle
+        def is_satisfied_by?(post)
+            !post.title.empty?
+        end
+    end
+
+    class WithTags
+        def is_satisfied_by?(post)
+            !post.tags.to_a.empty?
+        end
+    end
+
+    class Published
+        def is_satisfied_by?(post)
+            !!post.published
         end
     end
 end

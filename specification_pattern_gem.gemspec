@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["krtrosinski@gmail.com"]
 
   spec.summary       = %q{A gem that implements a specification pattern base, including logical operator specifications and a composite specification.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/K-Tros/specification-pattern-gem"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
